@@ -1,3 +1,5 @@
+
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 * {
   padding: 0;
@@ -112,6 +114,63 @@
     position: relative;
     left: 39%;
   }
+}
+
+/* About me & Skills Section */
+
+div.accordion{
+  position: relative;
+  margin:2em;
+}
+input{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity:0;
+  visibility: 0;
+}
+#skill_label {
+  background: #F8EEE7;
+  color:#94618e;
+  padding: 10px;
+  position: relative;
+}
+label::before{
+  content:"";
+  display: inline-block;
+  border: 10px solid transparent;
+  border-left: 15px solid #94618e;
+}
+label{
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 5px 0px 0px 30px;
+}
+div.p{
+  max-height:0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  background-color: white;
+  box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+div.p p {
+  padding:2em; 
+}
+input:checked ~ #skill_label label::before{
+  border-left: 10px solid transparent;
+  border-top: 15px solid #94618e;
+  margin-top:12px;
+  margin-right:10px;
+}
+input:checked ~ #skill_label ~ div.p{
+  max-height: 400px;
+}
+a{
+  color:steelblue;
 }
 
 /* Footer Section */
